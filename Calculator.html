@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Moussa</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js" defer></script>
+</head>
+<body>
+    <div class="con">
+        <div class="cal">
+            <form name="calc">
+                <div class="screen">
+                    <input type="text" name="screen" id="screen" readonly>
+                </div>
+                <div>
+                    <input type="button" value="AC" class="op" onclick="calc.screen.value = ''">
+                    <input type="button" value="DE" class="op" onclick="calc.screen.value = calc.screen.value.slice(0,-1)">
+                    <input type="button" value="." class="op" onclick="calc.screen.value += '.'">
+                    <input type="button" value="/" class="op" onclick="calc.screen.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="calc.screen.value += '7'">
+                    <input type="button" value="8" onclick="calc.screen.value += '8'">
+                    <input type="button" value="9" onclick="calc.screen.value += '9'">
+                    <input type="button" value="*" class="op" onclick="calc.screen.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="calc.screen.value += '4'">
+                    <input type="button" value="5" onclick="calc.screen.value += '5'">
+                    <input type="button" value="6" onclick="calc.screen.value += '6'">
+                    <input type="button" value="-" class="op" onclick="calc.screen.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="calc.screen.value += '1'">
+                    <input type="button" value="2" onclick="calc.screen.value += '2'">
+                    <input type="button" value="3" onclick="calc.screen.value += '3'">
+                    <input type="button" value="+" class="op" onclick="calc.screen.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="calc.screen.value += '00'">
+                    <input type="button" value="0" onclick="calc.screen.value += '0'">
+                    <input type="button" value="=" class="equal" onclick="calc.screen.value = eval(calc.screen.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+ <footer>  © 2025 Red Moon - القمر الاحمر | Moussa Mohammed. جميع الحقوق محفوظة.</footer>
+</body>
+</html>
+
+<!-- 
+    © 2025 Red Moon - القمر الاحمر | Moussa Mohammed
+    جميع الحقوق محفوظة.
+    تم تطوير هذا المشروع بواسطة Red Moon - القمر الاحمر و Moussa Mohammed.
+    يُمنع النسخ أو التعديل أو النشر بدون إذن خطي.
+-->
