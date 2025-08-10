@@ -1,66 +1,62 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Calculator SimpleMoussa</title>
-  <link rel="stylesheet" href="Calculator.css">
-  <script src="Calculator.js" defer></script>
-  <style>
-    /* إضافة ستايل بسيط للواجهة */
-    .con { max-width: 400px; margin: 20px auto; }
-    .screen input { width: 100%; font-size: 2em; padding: 10px; text-align: right; }
-    input[type=button] { width: 23%; font-size: 1.5em; margin: 2px; padding: 15px 0; cursor: pointer; }
-    .op { background-color: #f0ad4e; }
-    .equal { background-color: #5cb85c; color: white; }
-    footer { text-align: center; margin-top: 30px; font-size: 0.9em; color: #666; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Moussa</title>
+    <link rel="stylesheet" href="Calculator.css">
+    <script src="Calculator.js" defer></script>
 </head>
 <body>
-  <div class="con">
-    <div class="cal">
-      <form name="calc" onsubmit="return false;">
-        <div class="screen">
-          <input type="text" name="screen" id="screen" readonly />
+    <div class="con">
+        <div class="cal">
+            <form name="calc">
+                <div class="screen">
+                    <input type="text" name="screen" id="screen" readonly>
+                </div>
+                <div>
+                    <input type="button" value="AC" class="op" onclick="calc.screen.value = ''">
+                    <input type="button" value="DE" class="op" onclick="calc.screen.value = calc.screen.value.slice(0,-1)">
+                    <input type="button" value="." class="op" onclick="calc.screen.value += '.'">
+                    <input type="button" value="/" class="op" onclick="calc.screen.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="calc.screen.value += '7'">
+                    <input type="button" value="8" onclick="calc.screen.value += '8'">
+                    <input type="button" value="9" onclick="calc.screen.value += '9'">
+                    <input type="button" value="*" class="op" onclick="calc.screen.value += '*'">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="calc.screen.value += '4'">
+                    <input type="button" value="5" onclick="calc.screen.value += '5'">
+                    <input type="button" value="6" onclick="calc.screen.value += '6'">
+                    <input type="button" value="-" class="op" onclick="calc.screen.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="calc.screen.value += '1'">
+                    <input type="button" value="2" onclick="calc.screen.value += '2'">
+                    <input type="button" value="3" onclick="calc.screen.value += '3'">
+                    <input type="button" value="+" class="op" onclick="calc.screen.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="00" onclick="calc.screen.value += '00'">
+                    <input type="button" value="0" onclick="calc.screen.value += '0'">
+                    <input type="button" value="=" class="equal" onclick="calc.screen.value = eval(calc.screen.value)">
+                </div>
+            </form>
         </div>
-        <div>
-          <input type="button" value="AC" class="op" onclick="clearScreen()" />
-          <input type="button" value="DE" class="op" onclick="deleteLast()" />
-          <input type="button" value="." class="op" onclick="appendValue('.')" />
-          <input type="button" value="/" class="op" onclick="appendValue('/')" />
-        </div>
-        <div>
-          <input type="button" value="7" onclick="appendValue('7')" />
-          <input type="button" value="8" onclick="appendValue('8')" />
-          <input type="button" value="9" onclick="appendValue('9')" />
-          <input type="button" value="x" class="op" onclick="appendValue('*')" />
-        </div>
-        <div>
-          <input type="button" value="4" onclick="appendValue('4')" />
-          <input type="button" value="5" onclick="appendValue('5')" />
-          <input type="button" value="6" onclick="appendValue('6')" />
-          <input type="button" value="-" class="op" onclick="appendValue('-')" />
-        </div>
-        <div>
-          <input type="button" value="1" onclick="appendValue('1')" />
-          <input type="button" value="2" onclick="appendValue('2')" />
-          <input type="button" value="3" onclick="appendValue('3')" />
-          <input type="button" value="+" class="op" onclick="appendValue('+')" />
-        </div>
-        <div>
-          <input type="button" value="00" onclick="appendValue('00')" />
-          <input type="button" value="0" onclick="appendValue('0')" />
-          <input type="button" value="=" class="equal" onclick="calculate()" />
-        </div>
-      </form>
     </div>
-  </div>
-  <footer>
-    © 2025 Red Moon - القمر الاحمر | Moussa Mohammed. جميع الحقوق محفوظة.
-  </footer>
-
+ <footer>  © 2025 Red Moon - القمر الاحمر | Moussa Mohammed. جميع الحقوق محفوظة.</footer>
 </body>
 </html>
+
+<!-- 
+    © 2025 Red Moon - القمر الاحمر | Moussa Mohammed
+    جميع الحقوق محفوظة.
+    تم تطوير هذا المشروع بواسطة Red Moon - القمر الاحمر و Moussa Mohammed.
+    يُمنع النسخ أو التعديل أو النشر بدون إذن خطي.
+-->
+
 
     جميع الحقوق محفوظة.
     تم تطوير هذا المشروع بواسطة Red Moon - القمر الاحمر و Moussa Mohammed.
